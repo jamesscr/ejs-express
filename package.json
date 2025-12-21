@@ -1,0 +1,23 @@
+{
+  "name": "ejs-express-vercel",
+  "version": "1.0.0",
+  "main": "api/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "vercel:dev": "vercel dev",
+    "dev": "nodemon api/index.js",
+    "start": "node api/index.js"
+  },
+  "dependencies": {
+    "cloudinary": "^2.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongodb": "^7.0.0",
+    "nodemon": "^3.1.11"
+  },
+  "devDependencies": {
+    "vercel": "^36.0.0"
+  }
+}
