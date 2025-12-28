@@ -1,0 +1,61 @@
+<section class="alternate">
+    <div class="container">
+        <header class="text-center mb-60 clearfix">
+            <h2 class="fw-300 mb-0">RESTAURANT <strong>RESERVATION</strong></h2>
+        </header>
+
+        <form class="validate" action="php/contact.php" method="post" data-success="Reservation sent! Thank you!"
+            data-toastr-position="bottom-right">
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" id="reservation-name" name="reservation-name" class="form-control required"
+                        placeholder="Name*" autocomplete="false"/>
+                </div>
+
+                <div class="col-md-4">
+                    <input type="email" id="reservation-email" name="reservation-email" class="form-control required"
+                        placeholder="Email*" autocomplete="false"/>
+                </div>
+
+                <div class="col-md-4">
+                    <input type="text" id="reservation-phone" name="reservation-phone" class="form-control required"
+                        placeholder="Phone*" autocomplete="false"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" id="reservation-date" name="reservation-date"
+                        class="form-control datepicker required" data-format="yyyy-mm-dd" data-lang="en"
+                        data-RTL="false" placeholder="Reservation Date*" />
+                </div>
+
+                <div class="col-md-4">
+                    <input type="text" id="reservation-hour" name="reservation-hour"
+                        class="form-control required timepicker" value="11 : 00 : PM" placeholder="Reservation Hour*" />
+                </div>
+
+                <div class="col-md-4">
+                    <select id="reservation-people" name="reservation-people" class="form-control required">
+                        <option value="1">1 Person</option>
+                        <option value="2" selected="selected">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5">5 People</option>
+                        <option value="6">6 People</option>
+                        <option value="7">7 People</option>
+                        <option value="8">8 People</option>
+                        <option value="9">9 People</option>
+                        <option value="10">10 People</option>
+                        <option value="12">12 People</option>
+                        <option value="15">15 People</option>
+                        <option value="20">20 People</option>
+                        <option value="25">25 People</option>
+                        <option value="30">30 People</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="btn btn-success" type="submit">SUBMIT RESERVATION</button>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,141 @@
+<section id="contact">
+    <div class="container">
+
+        <header class="text-center mb-60">
+            <h2>Contact Us</h2>
+            <p class="lead font-lato">
+                Questions, reservations, or feedback? Reach out to Resto Plus anytime.
+            </p>
+            <hr />
+        </header>
+
+
+        <div class="row">
+
+            <!-- FORM -->
+            <div class="col-md-8 col-sm-8">
+
+                <h3>Drop us a line or just say <strong><em>Hello!</em></strong></h3>
+
+
+
+                <!-- Alert Success -->
+                <div id="alert_success" class="alert alert-success mb-30">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Thank You!</strong> Your message successfully sent!
+                </div><!-- /Alert Success -->
+
+
+                <!-- Alert Failed -->
+                <div id="alert_failed" class="alert alert-danger mb-30">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>[SMTP] Error!</strong> Internal server error!
+                </div><!-- /Alert Failed -->
+
+
+                <!-- Alert Mandatory -->
+                <div id="alert_mandatory" class="alert alert-danger mb-30">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+                </div><!-- /Alert Mandatory -->
+
+
+                <form action="php/contact.php" method="post" enctype="multipart/form-data">
+                    <fieldset>
+                        <input type="hidden" name="action" value="contact_send" />
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="contact-name">Full Name *</label>
+                                <input required type="text" value="" class="form-control" name="contact[name]" required
+                                    id="contact-name">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="contact-email">E-mail Address *</label>
+
+                                <input type="email" id="contact-email" name="contact[email]" class="form-control"
+                                    required autocomplete="email">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="contact-phone">Phone</label>
+                                <input type="text" value="" class="form-control" name="contact[phone]"
+                                    id="contact-phone">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <label for="contact-subject">Subject *</label>
+                                <input required type="text" value="" class="form-control" name="contact[subject]"
+                                    required id="contact-subject" autocomplete="false">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="contact-department">Department</label>
+                                <select class="form-control pointer" name="contact[department] "
+                                    id="contact-department">
+                                    <option value="">--- Select ---</option>
+                                    <option value="Marketing">Marketing</option>
+                                    <option value="Webdesign">Webdesign</option>
+                                    <option value="Architecture">Architecture</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="contact-message">Message *</label>
+                                <textarea required maxlength="10000" rows="8" class="form-control"
+                                    name="contact[message]" id="contact-message"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="contact-attachment">File Attachment</label>
+
+                                <input type="file" id="contact-attachment" name="contact[attachment]"
+                                    class="custom-file-upload" data-btn-text="Select a File"
+                                    accept=".zip,.pdf,.jpg,.jpeg,.png" />
+
+                                <small class="text-muted block">
+                                    Max file size: 10Mb (zip/pdf/jpg/png)
+                                </small>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND
+                                MESSAGE</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <!-- /FORM -->
+
+
+            <!-- INFO -->
+            <div class="col-md-4 col-sm-4">
+
+                <h2>Visit Us</h2>
+
+                <div id="map" class="h-400 grayscale"></div>
+
+                <hr />
+
+                <p>
+                    <span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> Street Name, City
+                        Name, Country</span>
+                    <span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a
+                            href="tel:1800-555-1234">1800-555-1234</a></span>
+                    <span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a
+                            href="mailto:mail@yourdomain.com">mail@yourdomain.com</a></span>
+                </p>
+
+            </div>
+            <!-- /INFO -->
+
+        </div>
+
+    </div>
+</section>

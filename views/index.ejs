@@ -1,18 +1,89 @@
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/public/styles.css" />
-  </head>
-  <body>
-    <main class="container">
-      <h1><%= title %></h1>
-      <p>Déployé sur Vercel ✅</p>
-      <p>Date/heure : <strong><%= now %></strong></p>
-      <hr />
-      <a href="/health">/health</a>
-    </main>
-  </body>
+
+
+<%- include('layout/head', locals) %>
+
+	<body class="smoothscroll enable-animation">
+
+		<!-- SLIDE TOP -->
+		<% include('layout/sliderTop',locals) %>
+			<!-- /SLIDE TOP -->
+
+
+			<!-- wrapper -->
+			<div id="wrapper">
+				<div id="header" class="navbar-toggleable-md sticky dark header-md clearfix">
+
+					<!-- TOP NAV -->
+					<%- include('layout/header', locals) %>
+					<!-- /Top Nav -->
+
+				</div>
+
+
+
+				<!-- REVOLUTION SLIDER -->
+				<%- include('partials/revolutionslider', locals) %>
+				<!-- /REVOLUTION SLIDER -->
+
+				<!-- Welcome -->
+				<%- include('partials/welcome', locals) %>
+				<!-- /Welcome -->
+
+				<!-- Gallery -->
+				<%- include('partials/gallery', locals) %>
+				<!-- /Gallery -->
+
+				<!-- Parallax -->
+				<%- include('partials/parallax1', locals) %>
+				<!-- /Parallax -->
+
+				<!-- Menu -->
+				<%- include('partials/menu', locals) %>
+				<!-- /Menu -->
+
+				<!-- Parallax -->
+				<%- include('partials/parallax2', locals) %>
+				<!-- /Parallax -->
+
+				<!-- Events -->
+				<%- include('partials/events', locals) %>
+				<!-- /Events -->
+
+				<!-- Parallax -->
+				<%- include('partials/parallax3', locals) %>
+				<!-- /Parallax -->
+
+				<!-- Reservation -->
+				<%- include('partials/reservation', locals) %>
+				<!-- /Reservation -->
+
+				<!-- CONTACT -->
+				<%- include('partials/contact', locals) %>
+				<!-- /CONTACT -->
+
+				<!-- FOOTER -->
+				<%- include('layout/footer', locals) %>
+				<!-- /FOOTER -->
+
+			</div>
+			<!-- /wrapper -->
+
+			<!-- SCROLL TO TOP -->
+			<a href="#" id="toTop"></a>
+
+
+			<!-- PRELOADER -->
+			<div id="preloader">
+				<div class="inner">
+					<span class="loader"></span>
+				</div>
+			</div>
+			<!-- /PRELOADER -->
+
+
+			<!-- JAVASCRIPT FILES -->
+			<%- include('layout/scripts', locals) %>
+				<!-- /JAVASCRIPT FILES -->
+	</body>
+
 </html>
